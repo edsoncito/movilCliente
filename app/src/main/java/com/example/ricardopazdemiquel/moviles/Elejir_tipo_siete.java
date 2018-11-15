@@ -98,7 +98,6 @@ public class Elejir_tipo_siete extends Fragment implements View.OnClickListener 
                     intent1.putExtra("lat", latitudeGPS);
                     intent1.putExtra("tipo", 4);
                     startActivity(intent1);
-
                 break;
             case R.id.btn_sieteMaravilla:
                 JSONObject obj = getUsr_log();

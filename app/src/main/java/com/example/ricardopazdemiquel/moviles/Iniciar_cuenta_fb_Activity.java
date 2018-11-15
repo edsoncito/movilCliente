@@ -5,14 +5,18 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
@@ -20,6 +24,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Hashtable;
@@ -40,7 +47,6 @@ public class Iniciar_cuenta_fb_Activity extends AppCompatActivity implements Vie
     private EditText edit_telefono;
     private EditText edit_correo;
     private com.mikhaellopez.circularimageview.CircularImageView img_photo;
-
     private RadioButton radio_hombre;
     private RadioButton radio_mujer;
     private Button btn_siguiente;
@@ -83,6 +89,9 @@ public class Iniciar_cuenta_fb_Activity extends AppCompatActivity implements Vie
                 JSONObject obj = new JSONObject(it.getStringExtra("usr_face"));
                 if(obj.has("id")){
                     id = obj.getString("id");
+                }
+                if (obj.getString("foto_perfil").length() > 0) {
+                    new AsyncTaskLoadImage(fotoConductor).execute(getString(R.string.url_foto) + obj.getString("foto_perfil"));
                 }
                 String nombre1="";
                 String nombre2="";
@@ -311,6 +320,29 @@ public class Iniciar_cuenta_fb_Activity extends AppCompatActivity implements Vie
         @Override
         protected void onProgressUpdate(String... values) {
             super.onProgressUpdate(values);
+        }
+    }
+
+    public class AsyncTaskLoadImage  extends AsyncTask<String, String, Bitmap> {
+        private final static String TAG = "AsyncTaskLoadImage";
+        private ImageView imageView;
+        public AsyncTaskLoadImage(ImageView imageView) {
+            this.imageView = imageView;
+        }
+        @Override
+        protected Bitmap doInBackground(String... params) {
+            Bitmap bitmap = null;
+            try {
+                URL url = new URL(params[0]);
+                bitmap = BitmapFactory.decodeStream((InputStream)url.getContent());
+            } catch (IOException e) {
+                Log.e(TAG, e.getMessage());
+            }
+            return bitmap;
+        }
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            imageView.setImageBitmap(bitmap);
         }
     }
 }
