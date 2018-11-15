@@ -4,11 +4,11 @@ android {
     compileSdkVersion 27
     buildToolsVersion '27.0.3'
     defaultConfig {
-        applicationId "com.example.ricardopazdemiquel.moviles"
+        applicationId "com.ricardopazdemiquel.moviles"
         minSdkVersion 21
         targetSdkVersion 27
-        versionCode 1
-        versionName "1.0.1"
+        versionCode 2
+        versionName "1.0.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
     }
@@ -23,6 +23,7 @@ android {
 }
 
 dependencies {
+
     configurations {
         all*.exclude group: 'com.android.support', module: 'support-v13'
     }
@@ -64,5 +65,6 @@ dependencies {
     // material chips
     implementation 'com.google.android:flexbox:0.3.2'
     // google flexible box
+
 }
 apply plugin: 'com.google.gms.google-services'

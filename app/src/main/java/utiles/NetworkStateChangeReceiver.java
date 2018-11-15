@@ -2,14 +2,11 @@ package utiles;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
-import com.example.ricardopazdemiquel.moviles.Carga;
-import com.example.ricardopazdemiquel.moviles.Sin_conexion;
+import com.ricardopazdemiquel.moviles.Sin_conexion;
 
 import static android.content.Context.CONNECTIVITY_SERVICE;
 

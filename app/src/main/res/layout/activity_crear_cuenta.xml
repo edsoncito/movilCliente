@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Crear_CuentaActivity"
+    tools:context="com.ricardopazdemiquel.moviles.Crear_CuentaActivity"
     android:fillViewport="true">
 
         <android.support.v7.widget.Toolbar

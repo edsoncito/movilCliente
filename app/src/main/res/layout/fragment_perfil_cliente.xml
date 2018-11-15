@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#fafafa"
-    tools:context=".Perfil_ClienteFragment">
+    tools:context="com.ricardopazdemiquel.moviles.Perfil_ClienteFragment">
 
 
         <android.support.v7.widget.Toolbar
@@ -45,17 +45,6 @@
                         android:layout_height="100dp"
                         android:layout_gravity="center_horizontal">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="bottom|end"
-                            android:translationZ="1dp">
-
-                            <ImageView
-                                android:layout_width="30dp"
-                                android:layout_height="30dp"
-                                android:src="@drawable/edit_pencil" />
-                        </LinearLayout>
 
                         <com.mikhaellopez.circularimageview.CircularImageView
                             android:id="@+id/img_photo"

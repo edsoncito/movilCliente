@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:scrollbars="none"
     android:scrollingCache="true"
-    tools:context=".Preferencias">
+    tools:context="com.ricardopazdemiquel.moviles.Preferencias">
 
     <LinearLayout
         android:layout_width="match_parent"

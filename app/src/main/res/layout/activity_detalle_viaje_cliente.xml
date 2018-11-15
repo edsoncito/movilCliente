@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Detalle_viaje_Cliente">
+    tools:context="com.ricardopazdemiquel.moviles.Detalle_viaje_Cliente">
 
     <LinearLayout
         android:layout_width="match_parent"

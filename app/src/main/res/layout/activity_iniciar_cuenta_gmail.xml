@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="650sp"
     android:orientation="vertical"
-    tools:context=".Iniciar_cuenta_gmail_Activity"
+    tools:context="com.ricardopazdemiquel.moviles.Iniciar_cuenta_gmail_Activity"
     android:fillViewport="true">
 
         <android.support.v7.widget.Toolbar
