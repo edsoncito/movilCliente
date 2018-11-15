@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:background="@drawable/backgroundcolor"
         android:focusableInTouchMode="true"
-        android:src="@drawable/loading" />
+        android:src="@drawable/git_cargando" />
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
@@ -33,4 +33,5 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </android.support.constraint.ConstraintLayout>
+
 </android.support.design.widget.CoordinatorLayout>

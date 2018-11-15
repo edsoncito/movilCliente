@@ -44,6 +44,7 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -81,6 +82,8 @@
             android:theme="@style/AppThemeone"
             android:windowSoftInputMode="adjustNothing"
             android:screenOrientation="portrait"/>
+
+
         <activity
             android:name=".PerfilCarrera"
             android:theme="@style/AppThemeone"
