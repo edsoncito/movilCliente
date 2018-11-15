@@ -60,6 +60,7 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.PendingResult;
 import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.location.places.AutocompleteFilter;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.PlaceBuffer;
 import com.google.android.gms.location.places.Places;
@@ -132,7 +133,7 @@ public class PedirSieteMap extends AppCompatActivity implements View.OnClickList
     private BottomSheetBehavior bottomSheetBehavior;
 
     private static final LatLngBounds BOUNDS_MOUNTAIN_VIEW = new LatLngBounds(
-            new LatLng(37.398160, -122.180831), new LatLng(37.430610, -121.9720));
+            new LatLng(-17.6881 ,-56.2247), new LatLng(-17.6881, -63.2247));
 
     JSONObject usr_log;
     //inicializamos los botones para pedir siete y el tipo de carrera
@@ -265,8 +266,9 @@ public class PedirSieteMap extends AppCompatActivity implements View.OnClickList
         });
         mAutocompleteTextView.setThreshold(3);
         mAutocompleteTextView.setOnItemClickListener(mAutocompleteClickListener);
+        AutocompleteFilter auto= new AutocompleteFilter.Builder().setCountry("BO").build();
         mPlaceArrayAdapter = new PlaceArrayAdapter(this, android.R.layout.simple_list_item_1,
-                BOUNDS_MOUNTAIN_VIEW, null);
+                BOUNDS_MOUNTAIN_VIEW,auto );
         mAutocompleteTextView.setAdapter(mPlaceArrayAdapter);
 
         mAutocompleteTextView2 = (AutoCompleteTextView) findViewById(R.id
