@@ -239,7 +239,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     public class Get_validarCarrera extends AsyncTask<Void, String, String>{
+
          private int id;
+
          public Get_validarCarrera(int id){
              this.id=id;
          }

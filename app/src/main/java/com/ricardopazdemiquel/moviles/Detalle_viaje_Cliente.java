@@ -163,7 +163,7 @@ public class Detalle_viaje_Cliente extends AppCompatActivity {
                         int costo = obj.getInt("costo_final");
                         int tipo = obj.getInt("tipo_pago");
                         int tipo_carrera = obj.getInt("tipo");
-                        nombre.setText(obj.getString("nombre"));
+                        nombre.setText(obj.getString("nombre")+ " " + obj.getString("apellido_pa"));
                         placa_numerotelefono.setText(placa + " ° " + telefono);
                         fecha.setText(obj.getString("fecha_pedido").substring(0, 16));
                         marca_auto.setText(obj.getString("marca") + " " + obj.getString("modelo"));

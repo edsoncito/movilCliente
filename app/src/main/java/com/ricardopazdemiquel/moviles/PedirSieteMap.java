@@ -1020,31 +1020,31 @@ public class PedirSieteMap extends AppCompatActivity implements View.OnClickList
                     sum += results[0];
                 }
 
-                try {
-                    String resp = new validar_precio(tipo_carrera).execute().get();
-                    if(resp==null){
-                        Toast.makeText(PedirSieteMap.this,"Error al conectarse con el servidor.",Toast.LENGTH_SHORT).show();
-                    }else{
-                        JSONObject object = new JSONObject(resp);
-                        if(object != null){
-                            double costo_metro = object.getDouble("costo_metro");
-                            double costo_minuto = object.getDouble("costo_minuto");
-                            double costo_basico = object.getDouble("costo_basico");
-                            mont = costo_basico + (costo_metro * sum ) + ((sum/500)*costo_minuto);
-                        }else {
-                            Toast.makeText(PedirSieteMap.this,"Error al obtener datos.",Toast.LENGTH_SHORT).show();
-                        }
-                        int montoaux = (int) mont;
-                        monto.setText("Monto aproximado: " +(montoaux-2)+" - "+(montoaux+2));
-                    }
-
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                } catch (ExecutionException e) {
-                    e.printStackTrace();
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
+//                try {
+//                    String resp = new validar_precio(tipo_carrera).execute().get();
+//                    if(resp==null){
+//                        Toast.makeText(PedirSieteMap.this,"Error al conectarse con el servidor.",Toast.LENGTH_SHORT).show();
+//                    }else{
+//                        JSONObject object = new JSONObject(resp);
+//                        if(object != null){
+//                            double costo_metro = object.getDouble("costo_metro");
+//                            double costo_minuto = object.getDouble("costo_minuto");
+//                            double costo_basico = object.getDouble("costo_basico");
+//                            mont = costo_basico + (costo_metro * sum ) + ((sum/500)*costo_minuto);
+//                        }else {
+//                            Toast.makeText(PedirSieteMap.this,"Error al obtener datos.",Toast.LENGTH_SHORT).show();
+//                        }
+//                        int montoaux = (int) mont;
+//                        monto.setText("Monto aproximado: " +(montoaux-2)+" - "+(montoaux+2));
+//                    }
+//
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                } catch (ExecutionException e) {
+//                    e.printStackTrace();
+//                } catch (JSONException e) {
+//                    e.printStackTrace();
+//                }
 
                 //sum = metros
             }
