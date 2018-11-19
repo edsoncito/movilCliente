@@ -30,7 +30,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.target.BitmapImageViewTarget;
 
-import com.example.ricardopazdemiquel.moviles.R;
+import com.ricardopazdemiquel.moviles.R;
 import com.google.android.gms.maps.GoogleMap;
 
 

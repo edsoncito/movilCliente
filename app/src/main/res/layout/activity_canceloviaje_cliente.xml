@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".CanceloViaje_Cliente"
+    tools:context="com.ricardopazdemiquel.moviles.CanceloViaje_Cliente"
     android:background="@drawable/backgroundcolor2">
 
     <TextView

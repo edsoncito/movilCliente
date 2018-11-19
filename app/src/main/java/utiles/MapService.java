@@ -19,8 +19,8 @@ import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.NotificationCompat;
 
-import com.example.ricardopazdemiquel.moviles.MainActivity;
-import com.example.ricardopazdemiquel.moviles.R;
+import com.ricardopazdemiquel.moviles.MainActivity;
+import com.ricardopazdemiquel.moviles.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
