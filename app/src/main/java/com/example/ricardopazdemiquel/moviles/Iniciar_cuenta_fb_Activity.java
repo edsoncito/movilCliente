@@ -91,7 +91,7 @@ public class Iniciar_cuenta_fb_Activity extends AppCompatActivity implements Vie
                     id = obj.getString("id");
                 }
                 if (obj.getString("foto_perfil").length() > 0) {
-                    new AsyncTaskLoadImage(fotoConductor).execute(getString(R.string.url_foto) + obj.getString("foto_perfil"));
+                    new AsyncTaskLoadImage(img_photo).execute(getString(R.string.url_face) + obj.getString("foto_perfil"));
                 }
                 String nombre1="";
                 String nombre2="";
